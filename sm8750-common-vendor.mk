@@ -40,6 +40,8 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/system_ext/etc/horae/horae.conf:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/horae/horae.conf \
     vendor/oneplus/sm8750-common/proprietary/system_ext/etc/init/horae.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/horae.rc \
     vendor/oneplus/sm8750-common/proprietary/system_ext/etc/init/qspa_system.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/qspa_system.rc \
+    vendor/oneplus/sm8750-common/proprietary/system_ext/etc/init/vendor.qti.qccsyshal_aidl-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.qti.qccsyshal_aidl-service.rc \
+    vendor/oneplus/sm8750-common/proprietary/system_ext/etc/permissions/com.qti.qcc.vendor_qcc.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qti.qcc.vendor_qcc.xml \
     vendor/oneplus/sm8750-common/proprietary/system_ext/etc/qspa/qspa_default.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/qspa/qspa_default.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/2024-10-11_platform_RSA_SM8750_license_d07bab28-156e-49b6-9eda-103eb7c6f6de.pfm:$(TARGET_COPY_OUT_VENDOR)/etc/2024-10-11_platform_RSA_SM8750_license_d07bab28-156e-49b6-9eda-103eb7c6f6de.pfm \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_4.2_enpuv5.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_4.2_enpuv5.pmd \
@@ -590,12 +592,12 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.fm-V1-ndk_vendor \
     vendor.qti.hardware.fm@1.0_vendor \
     vendor.qti.hardware.hexlp-V1-ndk \
-    vendor.qti.hardware.minkipcbinder-V1-ndk \
+    vendor.qti.hardware.minkipcbinder-V1-ndk_vendor \
     vendor.qti.hardware.qasr-V2-ndk \
     vendor.qti.hardware.qconfig-V1-ndk \
     vendor.qti.hardware.qseecom-V1-ndk \
     vendor.qti.hardware.sensorscalibrate-V1-ndk \
-    vendor.qti.hardware.vpp-V1-ndk \
+    vendor.qti.hardware.vpp-V1-ndk_vendor \
     vendor.qti.hardware.vpp@1.1 \
     vendor.qti.hardware.vpp@1.2 \
     vendor.qti.hardware.vpp@1.3 \
@@ -622,6 +624,16 @@ PRODUCT_PACKAGES += \
     vendor_lib_rfsa_adsp_nearby_napp_header \
     vendor_lib_rfsa_adsp_nearby_so \
     libostatslog \
+    libqcc \
+    libqcc_file_agent_sys \
+    libqccfileservice \
+    vendor.qti.hardware.qccsyshal@1.0 \
+    vendor.qti.hardware.qccsyshal@1.1 \
+    vendor.qti.hardware.qccsyshal@1.2 \
+    vendor.qti.hardware.qccvndhal@1.0 \
+    vendor.qti.qccsyshal_aidl-V1-ndk \
+    vendor.qti.qccsyshal_aidl-halimpl \
+    vendor.qti.qccvndhal_aidl-V1-ndk \
     libQnnHtp.aiboost \
     libQnnHtpV79Stub.aiboost \
     libQnnSystem.aiboost \
@@ -683,6 +695,7 @@ PRODUCT_PACKAGES += \
     TimeService \
     HotwordEnrollmentXGoogleHEXAGON_WIDEBAND \
     HotwordEnrollmentYGoogleHEXAGON_WIDEBAND \
+    QCC \
     com.android.hotwordenrollment.common.util \
     android.hardware.drm-service.xml \
     android.hardware.security.keymint-service-qti.xml \
@@ -709,6 +722,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vpp-service.xml \
     vendor.qti.hardware.wifidisplaysession-service.xml \
     vendor.qti.qccvndhal_aidl-service.xml \
+    vendor.qti.qccsyshal_aidl-service.xml \
     manifest_oplusSensor_aidl.xml \
     manifest_oplus_charger_aidl.xml \
     manifest_oplus_displaypanelfeature_aidl.xml \
@@ -774,6 +788,7 @@ PRODUCT_PACKAGES += \
     wfdvndservice \
     wifidisplayhalservice \
     horae \
+    qccsyshal_aidl-service \
     gauged \
     vendor-oplus-hardware-oplusSensor-V1-service \
     vendor.oplus.hardware.biometrics.face@1.0-service_uff \
@@ -1079,20 +1094,20 @@ PRODUCT_PACKAGES += \
     vendor.qti.gnss-service \
     vendor.qti.hardware.cacertaidlservice-V1-ndk_vendor \
     vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk_vendor \
-    vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk \
-    vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk \
+    vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk_vendor \
+    vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk_vendor \
     vendor.qti.hardware.data.connectionaidl-V1-ndk \
-    vendor.qti.hardware.data.connectionfactory-V1-ndk \
-    vendor.qti.hardware.data.dataactivity-V1-ndk \
-    vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk \
-    vendor.qti.hardware.data.flowaidlservice-V1-ndk \
+    vendor.qti.hardware.data.connectionfactory-V1-ndk_vendor \
+    vendor.qti.hardware.data.dataactivity-V1-ndk_vendor \
+    vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk_vendor \
+    vendor.qti.hardware.data.flowaidlservice-V1-ndk_vendor \
     vendor.qti.hardware.data.iwlandata-V2-ndk \
-    vendor.qti.hardware.data.ka-V1-ndk \
-    vendor.qti.hardware.data.lceaidlservice-V1-ndk \
-    vendor.qti.hardware.data.qmiaidlservice-V1-ndk \
+    vendor.qti.hardware.data.ka-V1-ndk_vendor \
+    vendor.qti.hardware.data.lceaidlservice-V1-ndk_vendor \
+    vendor.qti.hardware.data.qmiaidlservice-V1-ndk_vendor \
     vendor.qti.hardware.dpmaidlservice-V1-ndk_vendor \
-    vendor.qti.hardware.embmsslaidl-V2-ndk \
-    vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk \
+    vendor.qti.hardware.embmsslaidl-V2-ndk_vendor \
+    vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk_vendor \
     vendor.qti.hardware.radio.am-V1-ndk \
     vendor.qti.hardware.radio.atfwd-V1-ndk \
     vendor.qti.hardware.radio.common-V1-ndk \
@@ -1105,15 +1120,15 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.radio.uim-V1-ndk \
     vendor.qti.hardware.radio.uim_remote_client-V1-ndk \
     vendor.qti.hardware.radio.uim_remote_server-V1-ndk \
-    vendor.qti.ims.callcapabilityaidlservice-V1-ndk \
-    vendor.qti.ims.configaidlservice-V1-ndk \
-    vendor.qti.ims.connectionaidlservice-V1-ndk \
-    vendor.qti.ims.factoryaidlservice-V1-ndk \
-    vendor.qti.ims.imscmaidlservice-V1-ndk \
-    vendor.qti.ims.rcssipaidlservice-V1-ndk \
-    vendor.qti.ims.rcsuceaidlservice-V1-ndk \
-    vendor.qti.ims.uceaidlservice-V1-ndk \
-    vendor.qti.latencyaidlservice-V1-ndk \
+    vendor.qti.ims.callcapabilityaidlservice-V1-ndk_vendor \
+    vendor.qti.ims.configaidlservice-V1-ndk_vendor \
+    vendor.qti.ims.connectionaidlservice-V1-ndk_vendor \
+    vendor.qti.ims.factoryaidlservice-V1-ndk_vendor \
+    vendor.qti.ims.imscmaidlservice-V1-ndk_vendor \
+    vendor.qti.ims.rcssipaidlservice-V1-ndk_vendor \
+    vendor.qti.ims.rcsuceaidlservice-V1-ndk_vendor \
+    vendor.qti.ims.uceaidlservice-V1-ndk_vendor \
+    vendor.qti.latencyaidlservice-V1-ndk_vendor \
     vendor.qti.syshealthmon-V1-ndk \
     libimscamera_jni \
     lib-virtual-modem-protos \
