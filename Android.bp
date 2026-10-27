@@ -5954,105 +5954,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libqti-s3tf",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqti-s3tf.so",
-            ],
-            shared_libs: [
-                "libqti-scenariod",
-                "libcutils",
-                "liblog",
-                "libq-perflog",
-                "libutils",
-                "libqti-perfd",
-                "libbinder_ndk",
-                "vendor.qti.hardware.perf2-V1-ndk",
-                "libperfconfig",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqti-scenariod",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqti-scenariod.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libq-perflog",
-                "libutils",
-                "libxml2",
-                "libqti-util",
-                "vendor.qti.hardware.perf2-V1-ndk",
-                "libbase",
-                "libperfconfig",
-                "libperfioctl",
-                "libbinder_ndk",
-                "libqti-perfd",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqti-sslite",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqti-sslite.so",
-            ],
-            shared_libs: [
-                "libc",
-                "liblog",
-                "libq-perflog",
-                "libcutils",
-                "libperfconfig",
-                "libqti-perfd",
-                "libqti-scenariod",
-                "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libqtigefar",
     owner: "oneplus",
     strip: {
@@ -9113,7 +9014,6 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.fm-V1-ndk_vendor",
-    stem: "vendor.qti.hardware.fm-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -9121,7 +9021,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.fm-V1-ndk.so",
+                "proprietary/vendor/lib64/vendor.qti.hardware.fm-V1-ndk_vendor.so",
             ],
             shared_libs: [
                 "libbinder_ndk",
@@ -9139,7 +9039,6 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.fm@1.0_vendor",
-    stem: "vendor.qti.hardware.fm@1.0",
     owner: "oneplus",
     strip: {
         none: true,
@@ -9147,7 +9046,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.fm@1.0.so",
+                "proprietary/vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so",
             ],
             shared_libs: [
                 "libhidlbase",
@@ -11969,6 +11868,38 @@ cc_prebuilt_binary {
             ],
             shared_libs: [
                 "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "cnss-daemon-oplus",
+    owner: "oneplus",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/cnss-daemon-oplus",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libqmi_cci",
+                "libqmi_common_so",
+                "libnl",
+                "libcld80211",
+                "libperipheral_client",
+                "libmdmdetect",
                 "libc++",
                 "libc",
                 "libm",

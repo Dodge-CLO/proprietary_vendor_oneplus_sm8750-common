@@ -473,9 +473,6 @@ PRODUCT_PACKAGES += \
     libqsh \
     libqsh_ble_pb \
     libqsocket \
-    libqti-s3tf \
-    libqti-scenariod \
-    libqti-sslite \
     libqtigefar \
     libqtiidentitycredential \
     libqtikeymaster4 \
@@ -730,6 +727,7 @@ PRODUCT_PACKAGES += \
     KmInstallKeybox \
     adsprpcd \
     cdsprpcd \
+    cnss-daemon-oplus \
     diag-router \
     dspservice \
     feature_enabler_client \
