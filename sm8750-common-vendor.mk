@@ -837,7 +837,6 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/SDS_official_license.pfm:$(TARGET_COPY_OUT_VENDOR)/etc/SDS_official_license.pfm \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/SNS_official_license.pfm:$(TARGET_COPY_OUT_VENDOR)/etc/SNS_official_license.pfm \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
-    vendor/oneplus/sm8750-common/proprietary/vendor/etc/chre/preloaded_nanoapps.json:$(TARGET_COPY_OUT_VENDOR)/etc/chre/preloaded_nanoapps.json \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/cne/mwqem.conf:$(TARGET_COPY_OUT_VENDOR)/etc/cne/mwqem.conf \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/cne/profileMwqem.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/profileMwqem.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile1.xml \
@@ -1137,19 +1136,20 @@ PRODUCT_PACKAGES += \
     libdmtpclient \
     libifaa_factory \
     libimsortcapis \
+    libipc-framework \
+    libipcapis \
     libmindroid-app \
     libmindroid-framework \
     libortc_so \
     libqti-radio-service \
-    libradio-service \
     libradioapis \
     librfapis \
     librpmbengclient \
     libsecurity_event_dcs_vnd \
     libsecurity_event_olc_vnd \
-    libsubsys-service \
     libsubsys-utils \
     libvasapi \
+    vendor.oplus.hardware.subsys_radio-V1-ndk_odm \
     CACertService \
     CneApp \
     IWlanService \
