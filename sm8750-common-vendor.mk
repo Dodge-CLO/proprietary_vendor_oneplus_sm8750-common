@@ -88,6 +88,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/init.vendor.sensors.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.sensors.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/init.vendor.wlan.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.wlan.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/init_thermal-engine-v2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init_thermal-engine-v2.rc \
+    vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/poweropt-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/poweropt-service.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/qconfig.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qconfig.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/qdcmss.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qdcmss.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/qesdk-manager.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qesdk-manager.rc \
@@ -332,6 +333,7 @@ PRODUCT_PACKAGES += \
     libadreno_utils \
     libadsp_default_listener \
     libadsprpc \
+    libaodoptfeature \
     libar-pal \
     libarmemlog \
     libaudio_log_utils \
@@ -343,6 +345,7 @@ PRODUCT_PACKAGES += \
     libbluetooth_audio_session_qti_2_1 \
     libbt-hidlclient \
     libbtnv \
+    libcamerapoweroptfeature \
     libcapiv2svacnnvendor \
     libcapiv2svarnnvendor \
     libcapiv2udk7vendor \
@@ -373,6 +376,7 @@ PRODUCT_PACKAGES += \
     libfastcvopt \
     libfeutils \
     libgame_enhance \
+    libgamepoweroptfeature \
     libgpt \
     libgpudataproducer \
     libgsl \
@@ -422,6 +426,7 @@ PRODUCT_PACKAGES += \
     libnspsessionservice \
     libnsptransactionservice \
     liboemcrypto \
+    liboffscreenpoweroptfeature \
     libolc_vnd_vendor \
     libops \
     libos \
@@ -429,6 +434,9 @@ PRODUCT_PACKAGES += \
     libpdmapper \
     libpdnotifier \
     libperipheral_client \
+    libpowercallback \
+    libpowercore \
+    libpsmoptfeature \
     libqasr \
     libqc2audio_base \
     libqc2audio_basecodec \
@@ -517,6 +525,7 @@ PRODUCT_PACKAGES += \
     libspl \
     libssc_default_listener \
     libssd \
+    libstandbyfeature \
     libstreamparser \
     libsynx \
     libtaautoload \
@@ -528,6 +537,7 @@ PRODUCT_PACKAGES += \
     libtinyxml2_1 \
     libtrustedapploader \
     libubwcp \
+    libvideooptfeature \
     libvideotxr \
     libvideoutils \
     libvmfilexfer \
@@ -765,6 +775,7 @@ PRODUCT_PACKAGES += \
     pd-mapper \
     pm-proxy \
     pm-service \
+    poweropt-service \
     ppd \
     qcc-vendor \
     qdcmss \
