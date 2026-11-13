@@ -866,7 +866,6 @@ PRODUCT_PACKAGES += \
     sscrpcd \
     ssgqmigd \
     ssgtzd \
-    ssr_setup \
     system_dlkm_modprobe \
     tftp_server \
     thermal-engine-v2 \
