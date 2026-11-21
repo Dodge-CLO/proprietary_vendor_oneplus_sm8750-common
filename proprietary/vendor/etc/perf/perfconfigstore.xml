@@ -57,6 +57,7 @@ ________________________________________________________________________________
                 <Prop Name="ro.vendor.perf.lighteninglaunches_lite" Value="false" Target="tuna"/>
                 <Prop Name="ro.vendor.qti.set_wlc_affinity"  Value="true" Target="sun" />
                 <Prop Name="ro.vendor.self_boost.enable" Value="false" Target="tuna" />
+                <Prop Name="ro.vendor.qti.skip_wlc_full_scan" Value="true" Target="sun,tuna,kera" />
 
                 <!--System Properties -->
                 <!--LMKD Properties -->
